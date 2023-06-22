@@ -176,7 +176,6 @@ export function SideBar(props: { className?: string }) {
            <div className={styles["sidebar-action"]}>
             <img src={"https://work.weixin.qq.com/u/vce31f0fff64885a95?v=4.1.2.119220"} alt="QR Code" />
               <IconButton icon={<GithubIcon />} shadow />
-            </a>
           </div>
         </div>
         <div>
