@@ -180,6 +180,12 @@ export function SideBar(props: { className?: string }) {
             <a  onClick={() => setShowQrCode(true)}>
               <IconButton icon={<GithubIcon />} shadow />
             </a>
+             {showQrCode && (
+             <div className={styles["qr-code-container"]}>
+               <img src={GithubQrCode} alt="企业微信" className={styles["qr-code"]} />
+               <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
+             </div>
+             )}
           </div>
         </div>
         <div>
@@ -203,12 +209,6 @@ export function SideBar(props: { className?: string }) {
         className={styles["sidebar-drag"]}
         onMouseDown={(e) => onDragMouseDown(e as any)}
       ></div>
-      {showQrCode && (
-             <div className={styles["qr-code-container"]}>
-               <img src={../icons/github.svg} alt="企业微信" className={styles["qr-code"]} />
-               <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
-             </div>
-      )}
     </div>
   );
 }
