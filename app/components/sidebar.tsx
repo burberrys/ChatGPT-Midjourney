@@ -127,7 +127,7 @@ export function SideBar(props: { className?: string }) {
           Your own AI assistant.
         </div>
         <div className={styles["sidebar-logo"] + " no-dark"}>
-          <ChatGptIcon />
+          <GithubIcon />
         </div>
       </div>
 
@@ -177,15 +177,9 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a  onClick={() => setShowQrCode(true)}>
+            <a >
               <IconButton icon={<GithubIcon />} shadow />
             </a>
-             {showQrCode && (
-             <div className={styles["qr-code-container"]}>
-               <img src="https://github.com/burberrys/ChatGPT-Midjourney/tree/master/app/icons/github.svg" alt="企业微信" className={styles["qr-code"]} />
-               <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
-             </div>
-             )}
           </div>
         </div>
         <div>
