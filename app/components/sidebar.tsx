@@ -177,7 +177,7 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank" onClick={() => setShowQrCode(true)}>
+            <a  onClick={() => setShowQrCode(true)}>
               <IconButton icon={<GithubIcon />} shadow />
             </a>
           </div>
@@ -205,7 +205,7 @@ export function SideBar(props: { className?: string }) {
       ></div>
       {showQrCode && (
              <div className={styles["qr-code-container"]}>
-               <img src={GithubQrCode} alt="Github QR Code" className={styles["qr-code"]} />
+               <img src={GithubIcon} alt="企业微信" className={styles["qr-code"]} />
                <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
              </div>
       )}
