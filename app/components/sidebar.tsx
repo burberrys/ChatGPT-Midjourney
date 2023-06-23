@@ -10,7 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-import GithubQrCode from "../icons/QRcode_A2.jpg";
+import GithubQrCode from "../icons/github.svg";
 
 import Locale from "../locales";
 
@@ -105,7 +105,7 @@ function useDragSideBar() {
 }
 
 export function SideBar(props: { className?: string }) {
-   const [showQrCode, setShowQrCode] = useState(false); // 添加一个状态用于控制二维码的显示
+  const [showQrCode, setShowQrCode] = useState(false); // 添加一个状态用于控制二维码的显示
   const chatStore = useChatStore();
 
   // drag side bar
