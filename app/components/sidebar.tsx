@@ -10,6 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
+import GithubQrCode from "../icons/github_qrcode.svg";
 
 import Locale from "../locales";
 
@@ -27,6 +28,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useMobileScreen } from "../utils";
 import dynamic from "next/dynamic";
 import { showToast } from "./ui-lib";
+import { useState } from "react";
 
 const ChatList = dynamic(async () => (await import("./chat-list")).ChatList, {
   loading: () => null,
@@ -103,6 +105,7 @@ function useDragSideBar() {
 }
 
 export function SideBar(props: { className?: string }) {
+   const [showQrCode, setShowQrCode] = useState(false); // 添加一个状态用于控制二维码的显示
   const chatStore = useChatStore();
 
   // drag side bar
@@ -174,7 +177,7 @@ export function SideBar(props: { className?: string }) {
             </Link>
           </div>
           <div className={styles["sidebar-action"]}>
-            <a href={REPO_URL} target="_blank">
+            <a href={REPO_URL} target="_blank" onClick={() => setShowQrCode(true)}>
               <IconButton icon={<GithubIcon />} shadow />
             </a>
           </div>
@@ -200,6 +203,12 @@ export function SideBar(props: { className?: string }) {
         className={styles["sidebar-drag"]}
         onMouseDown={(e) => onDragMouseDown(e as any)}
       ></div>
+      {showQrCode && (
+             <div className={styles["qr-code-container"]}>
+               <img src={GithubQrCode} alt="Github QR Code" className={styles["qr-code"]} />
+               <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
+             </div>
+      )}
     </div>
   );
 }
