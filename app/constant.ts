@@ -1,6 +1,6 @@
 export const OWNER = "Licoy";
 export const REPO = "ChatGPT-Midjourney";
-export const REPO_URL = `https://www.canva.cn/design/DAFmoOeJqh4/D0esR3nk3b8B1YTzYS1Luw/edit?utm_content=DAFmoOeJqh4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton`;
+export const REPO_URL = `https://www.canva.cn/design/DAFmoiex9Bs/UT1xVqmL2VFGgSdwIY34cA/edit?utm_content=DAFmoiex9Bs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton`;
 export const ISSUE_URL = `https://github.com/${OWNER}/${REPO}/issues`;
 export const UPDATE_URL = `${REPO_URL}#keep-updated`;
 export const FETCH_COMMIT_URL = `https://api.github.com/repos/${OWNER}/${REPO}/commits?per_page=1`;
