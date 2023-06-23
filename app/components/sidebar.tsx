@@ -205,7 +205,7 @@ export function SideBar(props: { className?: string }) {
       ></div>
       {showQrCode && (
              <div className={styles["qr-code-container"]}>
-               <img src={GithubQrCode} alt="企业微信" className={styles["qr-code"]} />
+               <img src={../icons/github.svg} alt="企业微信" className={styles["qr-code"]} />
                <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
              </div>
       )}
