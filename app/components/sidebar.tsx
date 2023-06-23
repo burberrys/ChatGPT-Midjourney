@@ -10,7 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-import GithubQrCode from "../icons/github_qrcode.svg";
+import GithubQrCode from "../icons/QRcode_A2.jpg";
 
 import Locale from "../locales";
 
@@ -205,7 +205,7 @@ export function SideBar(props: { className?: string }) {
       ></div>
       {showQrCode && (
              <div className={styles["qr-code-container"]}>
-               <img src={GithubIcon} alt="企业微信" className={styles["qr-code"]} />
+               <img src={GithubQrCode} alt="企业微信" className={styles["qr-code"]} />
                <button className={styles["close-qr-code"]} onClick={() => setShowQrCode(false)}>Close</button>
              </div>
       )}
