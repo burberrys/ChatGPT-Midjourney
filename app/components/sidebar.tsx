@@ -10,7 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
-import GithubQrCode from "../icons/github_qrcode.svg";
+import GithubQrCode from "./app/icons/QRcode_A2.jpg";
 
 import Locale from "../locales";
 
